@@ -1,0 +1,109 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* RESET END */
+
+/* ===== Custom Styles ===== */
+body {
+  font-family: 'Heebo', sans-serif;
+  font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1600 - 300)));
+  background-image: url(https://78.media.tumblr.com/7005620d9202de9e0643dafa97363e4c/tumblr_pf33bwuPjy1xzzgndo1_1280.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ====== Typography ======= */
+#main-title {
+  font-family: 'Amatic SC', cursive;
+  font-size: calc(35px + (80 - 35) * ((100vw - 300px) / (1600 - 300)));
+  color: rgb(32, 66, 54);
+  padding: 0 0 5px 0;
+}
+h2 {
+  font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+/* ========= Main ========== */
+#main-bg {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+#inspireResult {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 6px 8px;
+  border-radius: 15px;
+}
+/* ======== Button ========= */
+#inspireMe {
+  font-family: 'Heebo', sans-serif;
+  font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+  background-color: rgb(42, 96, 168);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 15px;
+  margin: 50px 0 15px 0;
+}
+#inspireMe:hover {
+  background-color: rgb(31, 72, 127);
+}
+#inspireMe:active {
+  transform: translateY(1px);
+}

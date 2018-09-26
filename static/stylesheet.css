@@ -16,35 +16,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* RESET END */
 
@@ -68,7 +68,7 @@ body {
   font-family: 'Amatic SC', cursive;
   font-size: calc(35px + (80 - 35) * ((100vw - 300px) / (1600 - 300)));
   color: rgb(32, 66, 54);
-  padding: 0 0 5px 0;
+  padding: 15% 0 5px 0;
 }
 h2 {
   font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
@@ -81,16 +81,59 @@ h2 {
   height: 80%;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   border-radius: 5px;
 }
+
 #inspireResult {
+  visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#inspireResult div {
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 6px 8px;
+  height: 11px;
+  margin: 0 3px;
+  padding: 6px 10px;
   border-radius: 15px;
 }
-/* ======== Button ========= */
+/* ======== Buttons ========= */
+#radioContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.radioButtons {
+  position: relative;
+}
+
+.radioTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 3px 0 3px;
+  background-color: rgb(42, 96, 168);
+  color: white;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  
+}
+.radioButton:checked + .radioTile {
+  background-color: rgb(55, 76, 104);
+  border: 2px solid white;
+  margin: 13px 1px 0 1px;
+}
+.radioButton {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
 #inspireMe {
   font-family: 'Heebo', sans-serif;
   font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
@@ -99,7 +142,7 @@ h2 {
   padding: 8px 16px;
   border: none;
   border-radius: 15px;
-  margin: 50px 0 15px 0;
+  margin: 20px 0 35px 0;
 }
 #inspireMe:hover {
   background-color: rgb(31, 72, 127);

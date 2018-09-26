@@ -1,6 +1,13 @@
 var inspireResult = document.getElementById('inspireResult');
 var inspireWords = ["cow", "horse", "cat", "dog", "chicken", "goose"];
 
+var client = new XMLHttpRequest();
+client.open('GET', 'static/words_anke.txt');
+client.onreadystatechange = function() {
+  inspireWords = client.responseText.split("\n");
+}
+client.send();
+
 function generateWords(num) {
   let wordsArr = [];
   
